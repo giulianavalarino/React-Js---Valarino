@@ -9,6 +9,7 @@ import {PRODUCTS} from './components/constants/data/products';
 import Card from './components/Card';
 
 function App() {
+  const [user, setUser] = useState(null);
   const [isOpen, setIsOpen] = useState(false);
   const[showProducts, setShowProducts] = useState(false);
   const[buttonText, setButtonText] = useState('');
@@ -20,11 +21,24 @@ function App() {
   useEffect(()=>{
     setButtonText(isOpen ? 'Hide' : 'Show');
   }, [isOpen]);
+
+  const onHandlerCart = () => {
+    setIsOpen(!isOpen);
+  }
+
+  useEffect(() => {
+    fetch('https://63a0f68224d74f9fe845248b.mockapi.io/users')
+    .then((response) => response.json())
+    .then((data) => setUser(data[0])); 
+  }, [])
+
+
   return (
     <div className="App">
-        <Navbar/>
+        <Navbar user={user}/>
         <Sidebar onClose={onHandlerClick} isOpen={isOpen}>
         </Sidebar>
+        <ItemListContainer/>
         <Button text={buttonText} onHandlerClick={onHandlerClick}/>
         {showProducts}
         <div className='products-container'>
@@ -32,7 +46,6 @@ function App() {
           <Card product={product} key={product.name}/>
         ))}
         </div>
-        <ItemListContainer/>
     </div>
   );
 }

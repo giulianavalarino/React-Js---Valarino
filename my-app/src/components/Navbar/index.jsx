@@ -8,7 +8,8 @@ import CartWidget from "../CartWidget";
 
 
 
-const Navbar =() => {
+const Navbar =({numbersOfItems, onHandlerCart, user}) => {
+  console.log('user', user);
     return ( 
         <header className="header-menu">
             <a className="navbar-brand" href="#Inicio">Chiquita
@@ -26,7 +27,10 @@ const Navbar =() => {
               </a>
             </li>
           </ul>
-            <CartWidget/>
+          <div className="header-menu-avatar-container">
+            <img className="header-menu-avatar" src={user.avatar} alt={user.name}/>
+          </div>
+            <CartWidget onClick={onHandlerCart}/>
             </nav>
         </header>
     )
