@@ -10,3 +10,13 @@
   text-align: center;
 }
 
+.products-container{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1;
+    max-width: 1200px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
