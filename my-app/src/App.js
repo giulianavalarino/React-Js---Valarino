@@ -1,13 +1,15 @@
-import React, {useState, useEffect} from 'react';
-import {Home, home} from './pages';
-import {Routes, Route} from 'react-router-dom';
+import './App.css';
+import { Router } from './Router/router';
+import { NavBar } from './components/navbar/navbar';
+import { ItemListContainer } from './components/itemListContainer/itemListContainer';
 
-const App =() => {
+function App() {
   return (
-    <Routes>
-    <Route exact path="/" element={<Home/>}/>
-  </Routes>
-  )
-  }
+    <>
+      <NavBar></NavBar>
+      <Router/>
+    </>
+  );
+}
 
 export default App;
