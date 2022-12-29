@@ -1,0 +1,29 @@
+.tarjeta{
+    cursor: pointer;
+    background-color: rgb(223, 187, 238);
+    margin: 0.3rem 0.1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    transition: all ease 0.2s;
+    color: rgb(23, 6, 31);
+    height: 600px;
+  }
+  
+  .tarjeta:hover {
+    scale: 105%;
+    background-color: rgba(0, 0, 0, 0.566);
+  }
+
+  .tarjeta img {
+    border-radius: 5px;
+    width: 250px;
+    height: auto;
+    align-items: center;
+  }
+  
+  .tituloTarjeta {
+      max-width: 90%;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+  }

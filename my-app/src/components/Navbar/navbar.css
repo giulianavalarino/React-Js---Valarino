@@ -2,3 +2,8 @@
     background-color: rgb(213, 149, 233);
     padding: 20px;
 }
+
+.listas{
+    outline: none;
+    text-decoration: none;
+}

@@ -11,12 +11,12 @@ export const NavBar = () => {
                 <h2>Chiquita</h2>
             </div>
             </Link>
-            <ul className='d-flex justify-content-around'>
+            <ul className='d-flex listas justify-content-around'>
                 <Link to={"/Remeras"}>
-                    <li className='ms-3 me-3'>Remeras</li>
+                    <li className='ms-3 me-3 listas '>Remeras</li>
                 </Link>
                 <Link to={"/Vestidos"}>
-                    <li className='ms-3 me-3'>Vestidos</li>
+                    <li className='ms-3 me-3 listas'>Vestidos</li>
                 </Link>
             </ul>
         </div>

@@ -6,7 +6,7 @@ export const ItemListContainer = ({ arregloItems }) => {
     return (
         <>
       <div className="container pt-5">
-        <h4 className="text-center">VIsta principal</h4>
+        <h4 className="text-center">Vista principal</h4>
 
         <div className="row mt-5">
           {arregloItems.map((app) => (
