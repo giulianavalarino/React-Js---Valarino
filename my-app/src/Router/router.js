@@ -19,6 +19,7 @@ export const Router = () => {
             <Routes>
                 <Route path="*" element={<Navigate to={"/itemListContainer"}/>} />
                 <Route path="/itemListContainer" element={<ItemListContainer arregloItems={arregloItems}/>} />
+                <Route path="/itemListContainer/:id" element={<ItemDetalles arregloItems={arregloItems}></ItemDetalles>} />
                 <Route path="/Remeras" element={<ItemListContainer arregloItems={arregloItems.filter((item) => item.categoria == true)}/>} />
                 <Route path="/Vestidos" element={<ItemListContainer arregloItems={arregloItems.filter((item) => item.categoria == false)}/>} />
                 <Route path="/Remeras/:id" element={<ItemDetalles arregloItems={arregloItems}></ItemDetalles>} />
